@@ -1,0 +1,69 @@
+.feedback
+  padding-top: 233px
+  padding-bottom: 220px
+  background-color: $--accent-color
+  color: #FFFFFF
+  &-inner
+    position: relative
+  &-slider
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      text-align: center
+  &-quoteBx
+    display: flex
+    align-items: center
+    justify-content: center
+  &__title
+    font-size: 36px
+    @include font-poppinsSB
+    margin-top: 20px
+    color: $--gold-color
+  &__desc
+    font-size: 16px
+    line-height: 40px
+    max-width: 785px
+    margin: 20px auto 0
+  &__author
+    font-size: 24px
+    @include font-poppinsSB
+    margin-top: 40px
+    text-transform: uppercase
+    letter-spacing: 0.245em
+    color: $--gold-color
+  &-arrowBx
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+    z-index: 3
+    & path
+      transition: .4s
+    &:hover
+      & path
+        stroke: $--gold-color
+    &.left_arrow
+      left: 0
+    &.right_arrow
+      right: 0
+@media screen and (max-width: 768px)
+  .feedback
+    padding-top: 100px
+    padding-bottom: 100px
+    &-arrowBx
+      display: none !important
+@media screen and (max-width: 480px)
+  .feedback
+    &__title
+      font-size: 26px
+    &-quoteBx
+      & img
+        max-width: 60px
+    &__desc
+      line-height: 30px
+      margin: 15px auto 0
+    &__author
+      font-size: 21px
+      margin-top: 25px

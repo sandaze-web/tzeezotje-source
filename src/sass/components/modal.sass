@@ -1,0 +1,39 @@
+.modal
+  position: fixed
+  left: 50%
+  top: 40%
+  display: flex
+  align-items: center
+  justify-content: center
+  transform: translate(-50%, -60%)
+  opacity: 0
+  width: 100%
+  max-width: 600px
+  transition: .4s
+  pointer-events: none
+  z-index: 5
+  &.active
+    opacity: 1
+    transform: translate(-50%, -50%)
+    pointer-events: auto
+.form
+  background-color: #fff
+  padding: 20px
+  border-radius: 12px
+  width: 100%
+  &-inputBx
+    padding-bottom: 10px
+    & input
+      border: none
+      outline: none
+      border: 1px solid rgba(#000, .2)
+      width: 100%
+      padding: 13px 0 13px 30px
+      border-radius: 12px
+  &__button
+    margin-left: auto
+    background-color: $--accent-color
+    color: #FFFFFF
+    width: 100%
+    max-width: 200px
+    padding: 20px 0

@@ -1,0 +1,24 @@
+@mixin font($fontName, $fileName, $weight, $style)
+  @font-face
+    font-family: $fontName
+    font-display: swap
+    src: url('../fonts/#{$fileName}.ttf')
+    font-weight: #{$weight}
+    font-style: #{$style}
+
+@mixin font_woff($fontName, $fileName, $weight, $style)
+  @font-face
+    font-family: $fontName
+    font-display: swap
+    src: url('../fonts/#{$fileName}.woff')
+    font-weight: #{$weight}
+    font-style: #{$style}
+
+@mixin font-poppinsB
+  font-family: 'Poppins-Bold', sans-serif
+@mixin font-poppinsM
+  font-family: 'Poppins-Medium', sans-serif
+@mixin font-poppinsR
+  font-family: 'Poppins-Regular', sans-serif
+@mixin font-poppinsSB
+  font-family: 'Poppins-SemiBold', sans-serif

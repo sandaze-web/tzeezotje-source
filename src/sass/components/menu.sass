@@ -1,0 +1,92 @@
+.menu
+  padding-top: 80px
+  padding-bottom: 90px
+  &-inner
+    display: flex
+  &-list
+    padding-right: 32px
+    &__item
+      border-bottom: 1px solid #E7E7E7
+      margin-bottom: 20px
+      padding-bottom: 20px
+  &__title
+    font-size: 24px
+    @include font-poppinsSB
+  &-foods
+    padding-top: 10px
+    display: flex
+    align-items: center
+    &__item
+      font-size: 18px
+  &-dots
+    padding: 0 12px
+    display: flex
+    align-items: center
+    & span
+      display: inline-block
+      width: 5px
+      height: 5px
+      background-color: $--gold-color
+      border-radius: 50%
+      margin-right: 12px
+      &:last-child
+        margin-right: 0
+  &-imgBx
+    flex-grow: 1
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: 470px
+      height: 500px
+      border: 2px solid $--gold-color
+      z-index: -1
+    & img
+      max-width: 320px
+      &:first-child
+        margin-top: 152px
+        margin-right: 22px
+      &:last-child
+        margin-bottom: 152px
+@media screen and (max-width: 768px)
+  .menu
+    &-imgBx
+      display: none
+@media screen and (max-width: 480px)
+  .menu
+    padding-top: 40px
+    padding-bottom: 40px
+    &-inner
+      flex-direction: column
+    &__title
+      font-size: 21px
+    &-list
+      padding-right: 0
+    &-foods
+      padding-top: 5px
+      flex-direction: column
+      align-items: start
+      &__item
+        font-size: 16px
+        line-height: 21px
+    &-dots
+      padding: 5px 0
+      & span
+        display: none
+        &:first-child
+          display: block
+          margin: 0
+          width: 50px
+          height: 3px
+          border-radius: 12px
+    &-imgBx
+      display: none
+      & img
+        &:first-child
+          margin: 0
+        &:last-child
+          margin: 0
+

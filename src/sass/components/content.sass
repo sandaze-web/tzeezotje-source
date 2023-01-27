@@ -1,0 +1,82 @@
+.content
+  padding-top: 264px
+  padding-bottom: 265px
+  background: url('../images/content/bg.png') no-repeat
+  background-size: cover
+  color: #FFFFFF
+  &__subtitle
+    font-size: 24px
+    @include font-poppinsM
+    text-transform: uppercase
+  &__title
+    font-size: 64px
+    @include font-poppinsB
+    margin-top: 24px
+    line-height: 88px
+  &-box
+    display: flex
+    justify-content: space-between
+    padding-top: 40px
+  &__button
+    font-size: 18px
+    width: 100%
+    max-width: 270px
+    padding: 38px 0
+    color: #FFFFFF
+    background-color: $--accent-color
+    position: relative
+    overflow: hidden
+  &-social
+    display: flex
+    align-items: center
+    &__item
+      margin-right: 25px
+      &:last-child
+        margin-right: 0
+      & a
+        width: 48px
+        height: 48px
+        border-radius: 50%
+        border: 1px solid #fff
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: 0.5s
+        &:hover
+          transform: scale(1.1)
+.wave
+  background: rgba(255, 255, 255, .4)
+  border-radius: 50%
+  transform: scale(0)
+  animation: wave .5s linear
+  pointer-events: none
+  position: absolute
+@keyframes wave
+  100%
+    transform: scale(2)
+    opacity: 0
+@media screen and (max-width: 1170px)
+  .content
+    &__title
+      font-size: 61px
+@media screen and (max-width: 480px)
+  .content
+    padding-top: 150px
+    padding-bottom: 100px
+    &__subtitle
+      font-size: 18px
+    &__title
+      font-size: 32px
+      line-height: 40px
+      margin-top: 10px
+    &-box
+      flex-direction: column
+      padding-top: 25px
+    &__button
+      padding: 23px 0
+    &-social
+      padding-top: 30px
+      &__item
+        & a
+          width: 42px
+          height: 42px

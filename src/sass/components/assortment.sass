@@ -1,0 +1,67 @@
+.assortment
+  padding-top: 109px
+  padding-bottom: 80px
+  &__item
+    display: flex
+    align-items: center
+    margin-bottom: 30px
+    &:nth-child(2)
+      flex-direction: row-reverse
+      & .assortment-text
+        padding: 0 0 0 30px
+    &:last-child
+      margin-bottom: 0
+  &-text
+    padding-right: 30px
+  &-imgBx
+    display: flex
+  &__title
+    font-size: 40px
+    @include font-poppinsB
+    text-transform: uppercase
+    line-height: 88px
+  &__desc
+    position: relative
+    margin-top: 20px
+    max-width: 470px
+    color: $--text-gray-color
+    &:after
+      content: ''
+      position: absolute
+      width: 108px
+      height: 2px
+      background-color: $--gold-color
+      top: -16px
+      left: 0
+      transform: translateX(-50%)
+@media screen and (max-width: 768px)
+  .assortment
+    &__title
+      line-height: 38px
+    &__desc
+      margin-top: 10px
+      padding-top: 10px
+      &:after
+        top: 0
+@media screen and (max-width: 480px)
+  .assortment
+    padding-top: 70px
+    padding-bottom: 40px
+    &__item
+      flex-direction: column
+      margin-bottom: 20px
+      &:nth-child(2)
+        flex-direction: column
+        & .assortment-text
+          padding-left: 0
+    &-text
+      padding-right: 0
+    &-imgBx
+      padding-top: 20px
+    &__desc
+      margin-top: 10px
+      padding-top: 10px
+      &:after
+        top: 0
+        left: 50%
+        transform: translateX(-50%)

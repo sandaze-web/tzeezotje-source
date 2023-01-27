@@ -1,0 +1,35 @@
+@import 'config/index.sass'
+@import 'components/*.sass'
+@import 'page/*.sass'
+
+body
+  @include font-poppinsR
+
+.container
+  max-width: 1170px
+  margin: 0 auto
+
+// анимация при старте
+.opacity_animate
+  opacity: 0
+  transition: opacity 2s
+.blackout
+  position: absolute
+  left: 0
+  top: 0
+  height: 100vh
+  width: 100%
+  background-color: rgba(#000, .6)
+  z-index: 3
+  transition: .4s
+  opacity: 0
+  pointer-events: none
+  &.show
+    opacity: 1
+    pointer-events: auto
+@media screen and (max-width: 1170px)
+  .container
+    padding: 0 64px
+@media screen and (max-width: 480px)
+  .container
+    padding: 0 16px
